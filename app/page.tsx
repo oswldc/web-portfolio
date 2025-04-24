@@ -7,7 +7,6 @@ import { ModeToggle } from "@/components/mode-toggle";
 import {
     Github,
     Linkedin,
-    Twitter,
     Mail,
     ChevronDown,
     ExternalLink,
@@ -197,20 +196,35 @@ export default function Home() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
+                                    asChild
                                     size="lg"
                                     className="rounded-md btn-glow"
                                     style={{ backgroundColor: accentColor }}
                                 >
-                                    View My Work
-                                    <ChevronDown className="ml-2 h-4 w-4" />
+                                    <a
+                                        href="#projects"
+                                        className="flex items-center gap-2 transition-transform"
+                                    >
+                                        View My Work
+                                        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
+                                    </a>
                                 </Button>
                                 <Button
+                                    asChild
                                     size="lg"
                                     variant="outline"
                                     className="rounded-md"
                                 >
-                                    Download Resume
-                                    <ExternalLink className="ml-2 h-4 w-4" />
+                                    <a
+                                        href="/resume/resume-oswaldo.pdf"
+                                        download
+                                        className="flex items-center"
+                                    >
+                                        <span className="flex items-center">
+                                            Download Resume
+                                            <ExternalLink className="ml-2 h-4 w-4" />
+                                        </span>
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -224,7 +238,7 @@ export default function Home() {
                             <div className="relative z-10 card-inset p-6 rounded-xl">
                                 <div className="aspect-square rounded-xl overflow-hidden">
                                     <img
-                                        src="/placeholder.svg?height=600&width=600"
+                                        src="/img/profile.jpg?height=600&width=600"
                                         alt="Developer Portrait"
                                         className="w-full h-full object-cover"
                                     />
@@ -279,12 +293,12 @@ export default function Home() {
                                     client expectations.
                                 </p>
                                 <p style={{ color: mutedTextColor }}>
-                                    I believe in continuous learning and staying
-                                    updated with the latest technologies and
-                                    best practices in the industry. When I'm not
-                                    coding, you can find me exploring new hiking
-                                    trails, experimenting with photography, or
-                                    contributing to open-source projects.
+                                    I'm always eager to learn and grow,
+                                    constantly exploring new tools and
+                                    frameworks like React.js and diving into
+                                    UI/UX design with Figma. Outside of
+                                    development, I enjoy gaming, staying
+                                    curious, and exploring creative outlets.
                                 </p>
                             </div>
                             <div className="card-shadow p-6 rounded-xl">
@@ -301,7 +315,7 @@ export default function Home() {
                                                 •
                                             </span>
                                             <span>
-                                                Based in San Francisco, CA
+                                                Based in Nusa Tenggara Timur
                                             </span>
                                         </li>
                                         <li className="flex items-start gap-2">
@@ -311,10 +325,7 @@ export default function Home() {
                                             >
                                                 •
                                             </span>
-                                            <span>
-                                                5+ years of professional
-                                                experience
-                                            </span>
+                                            <span>Fresh graduate</span>
                                         </li>
                                         <li className="flex items-start gap-2">
                                             <span
@@ -324,8 +335,8 @@ export default function Home() {
                                                 •
                                             </span>
                                             <span>
-                                                Computer Science degree from UC
-                                                Berkeley
+                                                Information Technology degree
+                                                from Universtas Timor
                                             </span>
                                         </li>
                                         <li className="flex items-start gap-2">
@@ -374,7 +385,7 @@ export default function Home() {
                             </h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {/* E-Commerce Dashboard Project */}
+                            {/* Gencara Bangkit Capstone Project */}
                             <div className="p-6 group">
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
@@ -387,7 +398,7 @@ export default function Home() {
                                             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                                             style={{
                                                 backgroundColor:
-                                                    "rgba(66, 133, 244, 0.8)",
+                                                    "rgba(21, 59, 119, 0.8)",
                                             }}
                                         >
                                             <Button
@@ -403,26 +414,17 @@ export default function Home() {
                                     <div className="p-4 space-y-2">
                                         <div className="flex justify-between items-start">
                                             <h3 className="font-bold text-xl">
-                                                E-Commerce Dashboard
+                                                Gencara Bangkit Capstone Project
                                             </h3>
                                             <div className="flex gap-2">
                                                 <Link
-                                                    href="https://github.com/yourusername/ecommerce-dashboard"
+                                                    href="https://github.com/oswldc/Project-Capstone"
                                                     style={{
                                                         color: mutedTextColor,
                                                     }}
                                                     className="hover:text-primary"
                                                 >
                                                     <Github className="h-5 w-5" />
-                                                </Link>
-                                                <Link
-                                                    href="https://ecommerce-dashboard-demo.vercel.app"
-                                                    style={{
-                                                        color: mutedTextColor,
-                                                    }}
-                                                    className="hover:text-primary"
-                                                >
-                                                    <ExternalLink className="h-5 w-5" />
                                                 </Link>
                                             </div>
                                         </div>
@@ -436,13 +438,17 @@ export default function Home() {
                                             order processing.
                                         </p>
                                         <div className="flex flex-wrap gap-2 pt-2">
-                                            <span className="tag">React</span>
-                                            <span className="tag">Next.js</span>
                                             <span className="tag">
-                                                Supabase
+                                                Express JS
                                             </span>
                                             <span className="tag">
-                                                Recharts
+                                                Cloud Run
+                                            </span>
+                                            <span className="tag">
+                                                Cloud Storage
+                                            </span>
+                                            <span className="tag">
+                                                Firebase
                                             </span>
                                         </div>
                                     </div>
@@ -466,23 +472,26 @@ export default function Home() {
                                             }}
                                         >
                                             <Button
+                                                asChild
                                                 variant="secondary"
                                                 size="sm"
                                                 className="rounded-md"
                                             >
-                                                View Project
-                                                <ExternalLink className="ml-2 h-4 w-4" />
+                                                <a href="https://github.com/oswldc/notes-app-back-end">
+                                                    View Project
+                                                    <ExternalLink className="ml-2 h-4 w-4" />
+                                                </a>
                                             </Button>
                                         </div>
                                     </div>
                                     <div className="p-4 space-y-2">
                                         <div className="flex justify-between items-start">
                                             <h3 className="font-bold text-xl">
-                                                AI Content Generator
+                                                Notes-app Back-end
                                             </h3>
                                             <div className="flex gap-2">
                                                 <Link
-                                                    href="https://github.com/yourusername/ai-content-generator"
+                                                    href="https://github.com/oswldc/notes-app-back-end"
                                                     style={{
                                                         color: mutedTextColor,
                                                     }}
@@ -557,11 +566,11 @@ export default function Home() {
                                     <div className="p-4 space-y-2">
                                         <div className="flex justify-between items-start">
                                             <h3 className="font-bold text-xl">
-                                                Fitness Tracker App
+                                                Asclepius Backend
                                             </h3>
                                             <div className="flex gap-2">
                                                 <Link
-                                                    href="https://github.com/yourusername/fitness-tracker"
+                                                    href="https://github.com/oswldc/submission-oswaldo"
                                                     style={{
                                                         color: mutedTextColor,
                                                     }}
@@ -666,10 +675,9 @@ export default function Home() {
                                             {[
                                                 "Node.js",
                                                 "Express",
-                                                "Python",
-                                                "Django",
+                                                "MySQL",
                                                 "PostgreSQL",
-                                                "MongoDB",
+                                                "REST API",
                                             ].map((skill) => (
                                                 <div
                                                     key={skill}
@@ -699,10 +707,11 @@ export default function Home() {
                                             {[
                                                 "Git",
                                                 "Docker",
-                                                "AWS",
+                                                "Railway",
                                                 "Vercel",
-                                                "GitHub Actions",
+                                                "Google Cloud Platforms",
                                                 "Figma",
+                                                "Postman",
                                             ].map((skill) => (
                                                 <div
                                                     key={skill}
@@ -799,7 +808,7 @@ export default function Home() {
                                     </div>
                                     <div className="flex gap-4">
                                         <a
-                                            href="#"
+                                            href="https://github.com/oswldc"
                                             className="card-shadow p-3 rounded-xl inline-flex"
                                         >
                                             <div className="card-inset p-2 rounded-lg hover:text-primary transition-colors">
@@ -807,19 +816,11 @@ export default function Home() {
                                             </div>
                                         </a>
                                         <a
-                                            href="#"
+                                            href="https://www.linkedin.com/in/oswaldodaconceicao/"
                                             className="card-shadow p-3 rounded-xl inline-flex"
                                         >
                                             <div className="card-inset p-2 rounded-lg hover:text-primary transition-colors">
                                                 <Linkedin className="h-5 w-5" />
-                                            </div>
-                                        </a>
-                                        <a
-                                            href="#"
-                                            className="card-shadow p-3 rounded-xl inline-flex"
-                                        >
-                                            <div className="card-inset p-2 rounded-lg hover:text-primary transition-colors">
-                                                <Twitter className="h-5 w-5" />
                                             </div>
                                         </a>
                                     </div>
@@ -966,13 +967,6 @@ export default function Home() {
                             className="hover:text-primary transition-colors"
                         >
                             <Linkedin className="h-5 w-5" />
-                        </a>
-                        <a
-                            href="#"
-                            style={{ color: mutedTextColor }}
-                            className="hover:text-primary transition-colors"
-                        >
-                            <Twitter className="h-5 w-5" />
                         </a>
                         <a
                             href="#"

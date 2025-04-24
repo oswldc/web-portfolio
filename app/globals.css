@@ -1,4 +1,7 @@
 @tailwind base;
+html {
+    scroll-behavior: smooth;
+}
 @tailwind components;
 @tailwind utilities;
 
@@ -100,7 +103,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        background-image: linear-gradient(to right, #4285f4, #8ab4f8);
+        background-image: linear-gradient(to right, #4285f4, #1a3bbf);
     }
 
     .btn-glow {
