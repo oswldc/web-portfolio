@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/mode-toggle";
 import {
     Github,
     Linkedin,
@@ -106,11 +105,6 @@ export default function Home() {
                     >
                         <Menu size={24} />
                     </button>
-
-                    <div className="flex items-center gap-2">
-                        <ModeToggle />
-                        <Button variant="default">Get in Touch</Button>
-                    </div>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -191,8 +185,9 @@ export default function Home() {
                                 className="text-xl"
                                 style={{ color: mutedTextColor }}
                             >
-                                I build innovative web applications with modern
-                                technologies to solve real-world problems.
+                                I'm a full-stack developer with a strong
+                                interest in cloud computing and a passion for
+                                building meaningful web applications.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
@@ -235,7 +230,7 @@ export default function Home() {
                                     backgroundColor: "rgba(66, 133, 244, 0.2)",
                                 }}
                             ></div>
-                            <div className="relative z-10 card-inset p-6 rounded-xl">
+                            <div className="relative z-10 card-inset p-8 rounded-xl">
                                 <div className="aspect-square rounded-xl overflow-hidden">
                                     <img
                                         src="/img/profile.jpg?height=600&width=600"
@@ -390,8 +385,8 @@ export default function Home() {
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/placeholder.svg?height=300&width=500&text=E-Commerce+Dashboard"
-                                            alt="E-Commerce Dashboard Preview"
+                                            src="/placeholder.svg?height=300&width=500&text=Gencara"
+                                            alt="Gencara Bangkit Capstone Project Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
                                         <div
@@ -402,12 +397,15 @@ export default function Home() {
                                             }}
                                         >
                                             <Button
+                                                asChild
                                                 variant="secondary"
                                                 size="sm"
                                                 className="rounded-md"
                                             >
-                                                View Project
-                                                <ExternalLink className="ml-2 h-4 w-4" />
+                                                <a href="https://github.com/oswldc/Project-Capstone">
+                                                    View Project
+                                                    <ExternalLink className="ml-2 h-4 w-4" />
+                                                </a>
                                             </Button>
                                         </div>
                                     </div>
@@ -432,10 +430,12 @@ export default function Home() {
                                             className="text-sm"
                                             style={{ color: mutedTextColor }}
                                         >
-                                            A comprehensive dashboard for
-                                            e-commerce businesses with real-time
-                                            analytics, inventory management, and
-                                            order processing.
+                                            A mobile-friendly web application
+                                            that helps users learn Indonesian
+                                            Sign Language (SIBI) through
+                                            interactive materials, quizzes, and
+                                            real-time sign recognition powered
+                                            by machine learning.
                                         </p>
                                         <div className="flex flex-wrap gap-2 pt-2">
                                             <span className="tag">
@@ -455,20 +455,20 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            {/* AI Content Generator Project */}
+                            {/* Notes-app Project */}
                             <div className="p-6 group">
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/placeholder.svg?height=300&width=500&text=AI+Content+Generator"
-                                            alt="AI Content Generator Preview"
+                                            src="/placeholder.svg?height=300&width=500&text=Notes+app+Backend"
+                                            alt="Notes-app Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
                                         <div
                                             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                                             style={{
                                                 backgroundColor:
-                                                    "rgba(66, 133, 244, 0.8)",
+                                                    "rgba(21, 59, 119, 0.8)",
                                             }}
                                         >
                                             <Button
@@ -514,10 +514,12 @@ export default function Home() {
                                             className="text-sm"
                                             style={{ color: mutedTextColor }}
                                         >
-                                            A tool that leverages OpenAI's GPT
-                                            models to generate blog posts,
-                                            social media content, and marketing
-                                            copy.
+                                            The backend of the Notes-App is
+                                            built using Node.JS. It supports
+                                            features such as note creation,
+                                            editing, categorization, and secure
+                                            cloud storage, ensuring a seamless
+                                            and scalable experience for users.
                                         </p>
                                         <div className="flex flex-wrap gap-2 pt-2">
                                             <span className="tag">
@@ -537,29 +539,32 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            {/* Fitness Tracker App Project */}
+                            {/* Asclepius Project */}
                             <div className="p-6 group">
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/placeholder.svg?height=300&width=500&text=Fitness+Tracker+App"
-                                            alt="Fitness Tracker App Preview"
+                                            src="/placeholder.svg?height=300&width=500&text=Asclepius+Backend+App"
+                                            alt="Asclepius Backend Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
                                         <div
                                             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                                             style={{
                                                 backgroundColor:
-                                                    "rgba(66, 133, 244, 0.8)",
+                                                    "rgba(21, 59, 119, 0.8)",
                                             }}
                                         >
                                             <Button
+                                                asChild
                                                 variant="secondary"
                                                 size="sm"
                                                 className="rounded-md"
                                             >
-                                                View Project
-                                                <ExternalLink className="ml-2 h-4 w-4" />
+                                                <a href="https://github.com/oswldc/submission-oswaldo">
+                                                    View Project
+                                                    <ExternalLink className="ml-2 h-4 w-4" />
+                                                </a>
                                             </Button>
                                         </div>
                                     </div>
@@ -593,20 +598,20 @@ export default function Home() {
                                             className="text-sm"
                                             style={{ color: mutedTextColor }}
                                         >
-                                            A mobile-first web app that helps
-                                            users track workouts, set fitness
-                                            goals, and monitor progress with
-                                            visual analytics.
+                                            Deploying machine learning model for
+                                            checking cancer in google cloud
+                                            platfrom
                                         </p>
                                         <div className="flex flex-wrap gap-2 pt-2">
                                             <span className="tag">
-                                                React Native
+                                                Google Cloud Platform
                                             </span>
                                             <span className="tag">
-                                                Firebase
+                                                Cloud Run
                                             </span>
-                                            <span className="tag">D3.js</span>
-                                            <span className="tag">Expo</span>
+                                            <span className="tag">
+                                                Cloud Storage
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
