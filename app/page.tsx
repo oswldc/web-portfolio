@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import {
     Github,
@@ -14,6 +15,7 @@ import {
     Cpu,
     Send,
     Menu,
+    Award,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -91,6 +93,12 @@ export default function Home() {
                             Skills
                         </Link>
                         <Link
+                            href="#certificates"
+                            className="text-sm font-medium hover:text-primary transition-colors"
+                        >
+                            Certificates
+                        </Link>
+                        <Link
                             href="#contact"
                             className="text-sm font-medium hover:text-primary transition-colors"
                         >
@@ -105,6 +113,10 @@ export default function Home() {
                     >
                         <Menu size={24} />
                     </button>
+
+                    <div className="flex items-center gap-2">
+                        <ModeToggle />
+                    </div>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -385,7 +397,7 @@ export default function Home() {
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/placeholder.svg?height=300&width=500&text=Gencara"
+                                            src="/img/bangkit.png?height=300&width=500&text=Gencara"
                                             alt="Gencara Bangkit Capstone Project Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
@@ -460,7 +472,7 @@ export default function Home() {
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/placeholder.svg?height=300&width=500&text=Notes+app+Backend"
+                                            src="/img/dicoding.jpg?height=300&width=500&text=Notes+app+Backend"
                                             alt="Notes-app Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
@@ -499,15 +511,6 @@ export default function Home() {
                                                 >
                                                     <Github className="h-5 w-5" />
                                                 </Link>
-                                                <Link
-                                                    href="https://ai-content-generator.vercel.app"
-                                                    style={{
-                                                        color: mutedTextColor,
-                                                    }}
-                                                    className="hover:text-primary"
-                                                >
-                                                    <ExternalLink className="h-5 w-5" />
-                                                </Link>
                                             </div>
                                         </div>
                                         <p
@@ -522,17 +525,9 @@ export default function Home() {
                                             and scalable experience for users.
                                         </p>
                                         <div className="flex flex-wrap gap-2 pt-2">
+                                            <span className="tag">Node Js</span>
                                             <span className="tag">
-                                                TypeScript
-                                            </span>
-                                            <span className="tag">
-                                                OpenAI API
-                                            </span>
-                                            <span className="tag">
-                                                Tailwind CSS
-                                            </span>
-                                            <span className="tag">
-                                                Vercel AI SDK
+                                                REST API
                                             </span>
                                         </div>
                                     </div>
@@ -544,7 +539,7 @@ export default function Home() {
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/placeholder.svg?height=300&width=500&text=Asclepius+Backend+App"
+                                            src="/img/dicoding.jpg?height=300&width=500&text=Asclepius+Backend+App"
                                             alt="Asclepius Backend Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
@@ -582,15 +577,6 @@ export default function Home() {
                                                     className="hover:text-primary"
                                                 >
                                                     <Github className="h-5 w-5" />
-                                                </Link>
-                                                <Link
-                                                    href="https://fitness-tracker-app.vercel.app"
-                                                    style={{
-                                                        color: mutedTextColor,
-                                                    }}
-                                                    className="hover:text-primary"
-                                                >
-                                                    <ExternalLink className="h-5 w-5" />
                                                 </Link>
                                             </div>
                                         </div>
@@ -771,6 +757,334 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* Certificates Section */}
+                <section
+                    id="certificates"
+                    className="py-12 md:py-24 section-divider"
+                >
+                    <div className="container">
+                        <div className="flex items-center gap-2 mb-8">
+                            <Award
+                                className="h-6 w-6"
+                                style={{ color: accentColor }}
+                            />
+                            <h2 className="text-3xl font-bold tracking-tight">
+                                Certificates & Achievements
+                            </h2>
+                        </div>
+
+                        <div className="relative">
+                            {/* Left scroll button */}
+                            <button
+                                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 p-2 rounded-full shadow-md hover:bg-background/90 transition-all"
+                                onClick={() => {
+                                    const container = document.getElementById(
+                                        "certificates-container"
+                                    );
+                                    if (container) {
+                                        container.scrollBy({
+                                            left: -300,
+                                            behavior: "smooth",
+                                        });
+                                    }
+                                }}
+                                aria-label="Scroll left"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-chevron-left"
+                                >
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg>
+                            </button>
+
+                            {/* Certificates container with horizontal scroll */}
+                            <div
+                                id="certificates-container"
+                                className="flex overflow-x-auto gap-6 pb-4 px-8 snap-x snap-mandatory scrollbar-hide"
+                                style={{
+                                    scrollbarWidth: "none",
+                                    msOverflowStyle: "none",
+                                    scrollBehavior: "smooth",
+                                }}
+                            >
+                                {/* Bangkit Certification */}
+                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                    <div
+                                        className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
+                                        style={{
+                                            transformOrigin: "center bottom",
+                                            boxShadow:
+                                                "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                        }}
+                                    >
+                                        <div className="p-6 flex items-center justify-center">
+                                            <img
+                                                src="/certification/bangkit.png?height=150&width=150&text=AWS"
+                                                alt="Bangkit Certification"
+                                                className="h-24 w-24 object-contain"
+                                            />
+                                        </div>
+                                        <div className="p-4 space-y-2">
+                                            <h3 className="font-bold text-xl text-center">
+                                                Bangkit Academy Certification
+                                            </h3>
+                                            <p
+                                                className="text-sm text-center"
+                                                style={{
+                                                    color: mutedTextColor,
+                                                }}
+                                            >
+                                                Bangkit Academy
+                                            </p>
+                                            <div className="flex justify-between items-center pt-4">
+                                                <span
+                                                    className="text-sm"
+                                                    style={{
+                                                        color: mutedTextColor,
+                                                    }}
+                                                >
+                                                    Issued: Jul 2024
+                                                </span>
+                                                <Button
+                                                    asChild
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className="rounded-md"
+                                                >
+                                                    <a href="">
+                                                        Verify
+                                                        <ExternalLink className="ml-2 h-4 w-4" />
+                                                    </a>
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Menjadi Google Cloud Engineer */}
+                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                    <div
+                                        className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
+                                        style={{
+                                            transformOrigin: "center bottom",
+                                            boxShadow:
+                                                "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                        }}
+                                    >
+                                        <div className="p-6 flex items-center justify-center">
+                                            <img
+                                                src="/certification/MGCE.png?height=150&width=150&text=GCE"
+                                                alt="Menjadi Google Cloud Engineer"
+                                                className="h-24 w-24 object-contain"
+                                            />
+                                        </div>
+                                        <div className="p-4 space-y-2">
+                                            <h3 className="font-bold text-xl text-center">
+                                                Menjadi Google Cloud Engineer
+                                            </h3>
+                                            <p
+                                                className="text-sm text-center"
+                                                style={{
+                                                    color: mutedTextColor,
+                                                }}
+                                            >
+                                                Dicoding Indonesia
+                                            </p>
+                                            <div className="flex justify-between items-center pt-4">
+                                                <span
+                                                    className="text-sm"
+                                                    style={{
+                                                        color: mutedTextColor,
+                                                    }}
+                                                >
+                                                    Issued: May 2024
+                                                </span>
+                                                <Button
+                                                    asChild
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className="rounded-md"
+                                                >
+                                                    <a href="https://www.dicoding.com/certificates/JMZV39OWQPN9">
+                                                        Verify
+                                                        <ExternalLink className="ml-2 h-4 w-4" />
+                                                    </a>
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* System Administration and IT Infrastructure Services */}
+                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                    <div
+                                        className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
+                                        style={{
+                                            transformOrigin: "center bottom",
+                                            boxShadow:
+                                                "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                        }}
+                                    >
+                                        <div className="p-6 flex items-center justify-center">
+                                            <img
+                                                src="/certification/SystemAdministration.png?height=150&width=150&text=Meta"
+                                                alt="Meta Frontend Certification"
+                                                className="h-24 w-24 object-contain"
+                                            />
+                                        </div>
+                                        <div className="p-4 space-y-2">
+                                            <h3 className="font-bold text-xl text-center">
+                                                System Administration and IT
+                                                Infrastructure Services
+                                            </h3>
+                                            <p
+                                                className="text-sm text-center"
+                                                style={{
+                                                    color: mutedTextColor,
+                                                }}
+                                            >
+                                                Google
+                                            </p>
+                                            <div className="flex justify-between items-center pt-4">
+                                                <span
+                                                    className="text-sm"
+                                                    style={{
+                                                        color: mutedTextColor,
+                                                    }}
+                                                >
+                                                    Issued: Feb 2024
+                                                </span>
+                                                <Button
+                                                    asChild
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className="rounded-md"
+                                                >
+                                                    <a href="https://www.coursera.org/account/accomplishments/certificate/SMPRF3S8QQ6M">
+                                                        Verify
+                                                        <ExternalLink className="ml-2 h-4 w-4" />
+                                                    </a>
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Google Cloud Computing Foundations: Cloud Computing Fundamentals */}
+                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                    <div
+                                        className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
+                                        style={{
+                                            transformOrigin: "center bottom",
+                                            boxShadow:
+                                                "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                        }}
+                                    >
+                                        <div className="p-6 flex items-center justify-center">
+                                            <img
+                                                src="/certification/fundamentals.png?height=150&width=150&text=Azure"
+                                                alt="Google Cloud Computing Foundations: Cloud Computing Fundamentals"
+                                                className="h-24 w-24 object-contain"
+                                            />
+                                        </div>
+                                        <div className="p-4 space-y-2">
+                                            <h3 className="font-bold text-xl text-center">
+                                                Google Cloud Computing
+                                                Foundations: Cloud Computing
+                                                Fundamentals
+                                            </h3>
+                                            <p
+                                                className="text-sm text-center"
+                                                style={{
+                                                    color: mutedTextColor,
+                                                }}
+                                            >
+                                                Google Cloud Skill Boost
+                                            </p>
+                                            <div className="flex justify-between items-center pt-4">
+                                                <span
+                                                    className="text-sm"
+                                                    style={{
+                                                        color: mutedTextColor,
+                                                    }}
+                                                >
+                                                    Issued: Mar 2024
+                                                </span>
+                                                <Button
+                                                    asChild
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className="rounded-md"
+                                                >
+                                                    <a href="https://www.cloudskillsboost.google/public_profiles/1098a9a8-330e-41ab-aa4c-e2b4ba5f006a/badges/8237344?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share">
+                                                        Verify
+                                                        <ExternalLink className="ml-2 h-4 w-4" />
+                                                    </a>
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right scroll button */}
+                            <button
+                                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 p-2 rounded-full shadow-md hover:bg-background/90 transition-all"
+                                onClick={() => {
+                                    const container = document.getElementById(
+                                        "certificates-container"
+                                    );
+                                    if (container) {
+                                        container.scrollBy({
+                                            left: 300,
+                                            behavior: "smooth",
+                                        });
+                                    }
+                                }}
+                                aria-label="Scroll right"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-chevron-right"
+                                >
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div className="flex justify-center mt-8">
+                            <Button
+                                asChild
+                                variant="secondary"
+                                size="sm"
+                                className="rounded-md"
+                            >
+                                <a href="https://www.linkedin.com/in/oswaldodaconceicao/details/certifications/">
+                                    View All Certificates
+                                    <ExternalLink className="ml-2 h-4 w-4" />
+                                </a>
+                            </Button>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Contact Section */}
                 <section
                     id="contact"
@@ -786,157 +1100,62 @@ export default function Home() {
                                 Get In Touch
                             </h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="space-y-4">
-                                <p
-                                    className="text-xl"
-                                    style={{ color: mutedTextColor }}
+                        <div className="flex flex-col items-center justify-center text-center">
+                            <p
+                                className="text-xl max-w-2xl mb-8"
+                                style={{ color: mutedTextColor }}
+                            >
+                                Interested in working together? Feel free to
+                                reach out through any of the channels below. I'm
+                                always open to discussing new projects, creative
+                                ideas, or opportunities to be part of your
+                                vision.
+                            </p>
+
+                            <div className="flex flex-wrap justify-center gap-4 mb-8">
+                                <a
+                                    href="https://github.com/oswldc"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 hover:translate-y-[-4px]"
+                                    style={{
+                                        backgroundColor: accentLightColor,
+                                        color: accentColor,
+                                        boxShadow:
+                                            "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                    }}
                                 >
-                                    Interested in working together? Feel free to
-                                    reach out through any of the channels below
-                                    or fill out the contact form.
-                                </p>
-                                <div className="space-y-4 mt-6">
-                                    <div className="card-shadow p-4 rounded-xl">
-                                        <div className="card-inset p-4 rounded-lg flex items-center gap-4">
-                                            <Mail
-                                                className="h-5 w-5"
-                                                style={{ color: accentColor }}
-                                            />
-                                            <a
-                                                href="mailto:hello@example.com"
-                                                className="hover:text-primary transition-colors"
-                                            >
-                                                hello@example.com
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <a
-                                            href="https://github.com/oswldc"
-                                            className="card-shadow p-3 rounded-xl inline-flex"
-                                        >
-                                            <div className="card-inset p-2 rounded-lg hover:text-primary transition-colors">
-                                                <Github className="h-5 w-5" />
-                                            </div>
-                                        </a>
-                                        <a
-                                            href="https://www.linkedin.com/in/oswaldodaconceicao/"
-                                            className="card-shadow p-3 rounded-xl inline-flex"
-                                        >
-                                            <div className="card-inset p-2 rounded-lg hover:text-primary transition-colors">
-                                                <Linkedin className="h-5 w-5" />
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                                    <Github className="h-5 w-5" />
+                                    <span className="font-medium">GitHub</span>
+                                </a>
+
+                                <a
+                                    href="https://linkedin.com/in/oswaldodaconceicao"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 hover:translate-y-[-4px]"
+                                    style={{
+                                        backgroundColor: accentLightColor,
+                                        color: accentColor,
+                                        boxShadow:
+                                            "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                    }}
+                                >
+                                    <Linkedin className="h-5 w-5" />
+                                    <span className="font-medium">
+                                        LinkedIn
+                                    </span>
+                                </a>
                             </div>
-                            <div className="card-shadow p-6 rounded-xl">
-                                <div className="card-inset p-6 rounded-lg">
-                                    <form className="space-y-4">
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                            <div className="space-y-2">
-                                                <label
-                                                    htmlFor="name"
-                                                    className="text-sm font-medium"
-                                                >
-                                                    Name
-                                                </label>
-                                                <input
-                                                    id="name"
-                                                    type="text"
-                                                    className="w-full px-3 py-2 border rounded-md"
-                                                    style={{
-                                                        backgroundColor: isDark
-                                                            ? "hsl(222 47% 7%)"
-                                                            : "#f8f9fa",
-                                                        borderColor: isDark
-                                                            ? "hsl(217.2 32.6% 17.5%)"
-                                                            : "#dee2e6",
-                                                    }}
-                                                    placeholder="Your name"
-                                                />
-                                            </div>
-                                            <div className="space-y-2">
-                                                <label
-                                                    htmlFor="email"
-                                                    className="text-sm font-medium"
-                                                >
-                                                    Email
-                                                </label>
-                                                <input
-                                                    id="email"
-                                                    type="email"
-                                                    className="w-full px-3 py-2 border rounded-md"
-                                                    style={{
-                                                        backgroundColor: isDark
-                                                            ? "hsl(222 47% 7%)"
-                                                            : "#f8f9fa",
-                                                        borderColor: isDark
-                                                            ? "hsl(217.2 32.6% 17.5%)"
-                                                            : "#dee2e6",
-                                                    }}
-                                                    placeholder="Your email"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label
-                                                htmlFor="subject"
-                                                className="text-sm font-medium"
-                                            >
-                                                Subject
-                                            </label>
-                                            <input
-                                                id="subject"
-                                                type="text"
-                                                className="w-full px-3 py-2 border rounded-md"
-                                                style={{
-                                                    backgroundColor: isDark
-                                                        ? "hsl(222 47% 7%)"
-                                                        : "#f8f9fa",
-                                                    borderColor: isDark
-                                                        ? "hsl(217.2 32.6% 17.5%)"
-                                                        : "#dee2e6",
-                                                }}
-                                                placeholder="Subject"
-                                            />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label
-                                                htmlFor="message"
-                                                className="text-sm font-medium"
-                                            >
-                                                Message
-                                            </label>
-                                            <textarea
-                                                id="message"
-                                                rows={4}
-                                                className="w-full px-3 py-2 border rounded-md resize-none"
-                                                style={{
-                                                    backgroundColor: isDark
-                                                        ? "hsl(222 47% 7%)"
-                                                        : "#f8f9fa",
-                                                    borderColor: isDark
-                                                        ? "hsl(217.2 32.6% 17.5%)"
-                                                        : "#dee2e6",
-                                                }}
-                                                placeholder="Your message"
-                                            ></textarea>
-                                        </div>
-                                        <Button
-                                            type="submit"
-                                            className="w-full rounded-md"
-                                            style={{
-                                                backgroundColor: accentColor,
-                                            }}
-                                        >
-                                            Send Message
-                                            <Send className="ml-2 h-4 w-4" />
-                                        </Button>
-                                    </form>
-                                </div>
-                            </div>
+
+                            <Button
+                                size="lg"
+                                className="rounded-md btn-glow"
+                                style={{ backgroundColor: accentColor }}
+                            >
+                                Download Resume
+                                <ExternalLink className="ml-2 h-4 w-4" />
+                            </Button>
                         </div>
                     </div>
                 </section>
@@ -954,8 +1173,8 @@ export default function Home() {
                             className="text-sm"
                             style={{ color: mutedTextColor }}
                         >
-                            © {new Date().getFullYear()} Your Name. All rights
-                            reserved.
+                            © {new Date().getFullYear()} Oswaldo Da Conceicao.
+                            All rights reserved.
                         </p>
                     </div>
                     <div className="flex items-center gap-4">
