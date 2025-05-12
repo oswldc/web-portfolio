@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
     Github,
     Linkedin,
-    Mail,
     ChevronDown,
     ExternalLink,
     Briefcase,
@@ -173,7 +172,7 @@ export default function Home() {
                 {/* Hero Section */}
                 <section
                     id="home"
-                    className="py-12 md:py-24 lg:py-32 space-y-8"
+                    className="py-12 md:py-24 lg:py-30 space-y-8"
                 >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div className="space-y-6">
@@ -245,7 +244,7 @@ export default function Home() {
                             <div className="relative z-10 card-inset p-8 rounded-xl">
                                 <div className="aspect-square rounded-xl overflow-hidden">
                                     <img
-                                        src="/img/profile.jpg?height=600&width=600"
+                                        src="/img/profile.jpg?height=250&width=250"
                                         alt="Developer Portrait"
                                         className="w-full h-full object-cover"
                                     />
@@ -269,8 +268,8 @@ export default function Home() {
 
                 {/* About Section */}
                 <section id="about" className="py-12 md:py-24 section-divider">
-                    <div className="container">
-                        <div className="flex items-center gap-2 mb-8">
+                    <div className="container text-center">
+                        <div className="flex justify-center items-center gap-2 mb-8">
                             <User
                                 className="h-6 w-6"
                                 style={{ color: accentColor }}
@@ -279,99 +278,75 @@ export default function Home() {
                                 About Me
                             </h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div className="md:col-span-2 space-y-4">
-                                <p
-                                    className="text-xl"
-                                    style={{ color: mutedTextColor }}
+                        <div className="space-y-4 max-w-5xl mx-auto">
+                            <p
+                                className="text-3xl font-extrabold"
+                                style={{ color: accentColor }}
+                            >
+                                I'm a full-stack developer and cloud engineer
+                                with a strong passion for building user-friendly
+                                and efficient web applications.
+                            </p>
+                            <p
+                                className="text-xl font-semibold "
+                                style={{ color: mutedTextColor }}
+                            >
+                                Exploring new tools and technologies is
+                                something I genuinely enjoy, especially when it
+                                comes to{" "}
+                                <a
+                                    className="underline"
+                                    style={{ textDecorationColor: accentColor }}
                                 >
-                                    I'm a passionate full-stack developer with a
-                                    focus on creating intuitive and performant
-                                    web applications.
-                                </p>
-                                <p style={{ color: mutedTextColor }}>
-                                    With over 5 years of experience in web
-                                    development, I've worked on a variety of
-                                    projects ranging from small business
-                                    websites to complex enterprise applications.
-                                    My approach combines technical expertise
-                                    with creative problem-solving to deliver
-                                    solutions that not only meet but exceed
-                                    client expectations.
-                                </p>
-                                <p style={{ color: mutedTextColor }}>
-                                    I'm always eager to learn and grow,
-                                    constantly exploring new tools and
-                                    frameworks like React.js and diving into
-                                    UI/UX design with Figma. Outside of
-                                    development, I enjoy gaming, staying
-                                    curious, and exploring creative outlets.
-                                </p>
-                            </div>
-                            <div className="card-shadow p-6 rounded-xl">
-                                <div className="card-inset p-6 rounded-xl space-y-4">
-                                    <h3 className="font-bold text-xl">
-                                        Quick Facts
-                                    </h3>
-                                    <ul className="space-y-2">
-                                        <li className="flex items-start gap-2">
-                                            <span
-                                                style={{ color: accentColor }}
-                                                className="font-bold"
-                                            >
-                                                •
-                                            </span>
-                                            <span>
-                                                Based in Nusa Tenggara Timur
-                                            </span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span
-                                                style={{ color: accentColor }}
-                                                className="font-bold"
-                                            >
-                                                •
-                                            </span>
-                                            <span>Fresh graduate</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span
-                                                style={{ color: accentColor }}
-                                                className="font-bold"
-                                            >
-                                                •
-                                            </span>
-                                            <span>
-                                                Information Technology degree
-                                                from Universtas Timor
-                                            </span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span
-                                                style={{ color: accentColor }}
-                                                className="font-bold"
-                                            >
-                                                •
-                                            </span>
-                                            <span>
-                                                Worked with 20+ clients
-                                                worldwide
-                                            </span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span
-                                                style={{ color: accentColor }}
-                                                className="font-bold"
-                                            >
-                                                •
-                                            </span>
-                                            <span>
-                                                Fluent in English and Spanish
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                                    coding
+                                </a>
+                                , exploring new{" "}
+                                <a
+                                    className="underline"
+                                    style={{ textDecorationColor: accentColor }}
+                                >
+                                    frameworks
+                                </a>
+                                , and improving my development skills through
+                                personal{" "}
+                                <a
+                                    className="underline"
+                                    style={{ textDecorationColor: accentColor }}
+                                >
+                                    projects
+                                </a>
+                                . In my free time, you’ll often find me playing{" "}
+                                <a
+                                    className="underline"
+                                    style={{ textDecorationColor: accentColor }}
+                                >
+                                    video games
+                                </a>
+                                ,{" "}
+                                <a
+                                    className="underline"
+                                    style={{ textDecorationColor: accentColor }}
+                                >
+                                    reading manga
+                                </a>
+                                , or{" "}
+                                <a
+                                    className="underline"
+                                    style={{ textDecorationColor: accentColor }}
+                                >
+                                    watching movies
+                                </a>
+                                . Activities that not only entertain me but also
+                                inspire many of my creative ideas in tech.
+                            </p>
+                            <p
+                                className="text-xl font-semibold"
+                                style={{ color: mutedTextColor }}
+                            >
+                                For me, web development is more than just
+                                writing code. It's about creating experiences
+                                that people enjoy using.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -603,7 +578,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-center mt-8">
+                        <div className="flex justify-center mt-8 hover:translate-y-[-4px]">
                             <Button variant="outline" className="rounded-md">
                                 View All Projects
                                 <ExternalLink className="ml-2 h-4 w-4" />
@@ -809,7 +784,7 @@ export default function Home() {
                             {/* Certificates container with horizontal scroll */}
                             <div
                                 id="certificates-container"
-                                className="flex overflow-x-auto gap-6 pb-4 px-8 snap-x snap-mandatory scrollbar-hide"
+                                className="flex overflow-y-auto gap-4 pb-8 px-8 snap-x snap-mandatory scrollbar-hide"
                                 style={{
                                     scrollbarWidth: "none",
                                     msOverflowStyle: "none",
@@ -817,7 +792,7 @@ export default function Home() {
                                 }}
                             >
                                 {/* Bangkit Certification */}
-                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                <div className="min-w-[400px] max-w-[400px] flex-shrink-0 snap-center">
                                     <div
                                         className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
                                         style={{
@@ -871,7 +846,7 @@ export default function Home() {
                                 </div>
 
                                 {/* Menjadi Google Cloud Engineer */}
-                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                <div className="min-w-[400px] max-w-[400px] flex-shrink-0 snap-center">
                                     <div
                                         className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
                                         style={{
@@ -925,7 +900,7 @@ export default function Home() {
                                 </div>
 
                                 {/* System Administration and IT Infrastructure Services */}
-                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                <div className="min-w-[400px] max-w-[400px] flex-shrink-0 snap-center">
                                     <div
                                         className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
                                         style={{
@@ -980,7 +955,7 @@ export default function Home() {
                                 </div>
 
                                 {/* Google Cloud Computing Foundations: Cloud Computing Fundamentals */}
-                                <div className="min-w-[300px] flex-shrink-0 snap-center">
+                                <div className="min-w-[400px] max-w-[400px] flex-shrink-0 snap-center">
                                     <div
                                         className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl"
                                         style={{
@@ -1074,9 +1049,12 @@ export default function Home() {
                                 asChild
                                 variant="secondary"
                                 size="sm"
-                                className="rounded-md"
+                                className="rounded-md hover:translate-y-[-4px]"
                             >
-                                <a href="https://www.linkedin.com/in/oswaldodaconceicao/details/certifications/">
+                                <a
+                                    target="_blank"
+                                    href="https://www.linkedin.com/in/oswaldodaconceicao/details/certifications/"
+                                >
                                     View All Certificates
                                     <ExternalLink className="ml-2 h-4 w-4" />
                                 </a>
@@ -1146,15 +1124,49 @@ export default function Home() {
                                         LinkedIn
                                     </span>
                                 </a>
+                                <a
+                                    href="https://discord.com/users/502783354010206218"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 hover:translate-y-[-4px]"
+                                    style={{
+                                        backgroundColor: accentLightColor,
+                                        color: accentColor,
+                                        boxShadow:
+                                            "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                                    }}
+                                >
+                                    <img
+                                        src="/discord.png"
+                                        alt="Discord"
+                                        className="h-5 w-5"
+                                        style={{ fill: accentColor }}
+                                    />
+                                    <span className="font-medium">Discord</span>
+                                </a>
                             </div>
 
                             <Button
+                                asChild
                                 size="lg"
-                                className="rounded-md btn-glow"
-                                style={{ backgroundColor: accentColor }}
+                                variant="outline"
+                                className="rounded-full hover:translate-y-[-4px] outline-solid"
+                                style={{
+                                    color: accentColor,
+                                    backgroundColor: accentLightColor,
+                                    borderColor: accentColor,
+                                }}
                             >
-                                Download Resume
-                                <ExternalLink className="ml-2 h-4 w-4" />
+                                <a
+                                    href="/resume/resume-oswaldo.pdf"
+                                    download
+                                    className="flex items-center"
+                                >
+                                    <span className="flex items-center">
+                                        Download Resume
+                                        <ExternalLink className="ml-2 h-4 w-4" />
+                                    </span>
+                                </a>
                             </Button>
                         </div>
                     </div>
@@ -1177,29 +1189,7 @@ export default function Home() {
                             All rights reserved.
                         </p>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <a
-                            href="#"
-                            style={{ color: mutedTextColor }}
-                            className="hover:text-primary transition-colors"
-                        >
-                            <Github className="h-5 w-5" />
-                        </a>
-                        <a
-                            href="#"
-                            style={{ color: mutedTextColor }}
-                            className="hover:text-primary transition-colors"
-                        >
-                            <Linkedin className="h-5 w-5" />
-                        </a>
-                        <a
-                            href="#"
-                            style={{ color: mutedTextColor }}
-                            className="hover:text-primary transition-colors"
-                        >
-                            <Mail className="h-5 w-5" />
-                        </a>
-                    </div>
+                    <div className="flex items-center gap-4"></div>
                 </div>
             </footer>
         </div>
