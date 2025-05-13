@@ -8,9 +8,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "My Portfolio",
-    description:
-        "A modern portfolio website with neumorphic and brutalist design elements",
+    title: "Oswaldo Portfolio",
+    description: "My Portfolio",
 };
 
 export default function RootLayout({

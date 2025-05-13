@@ -60,8 +60,12 @@ export default function Home() {
             >
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <Link href="/" className="font-bold text-xl">
-                            Portfolio
+                        <Link
+                            href="/"
+                            className="font-bold text-xl"
+                            style={{ color: accentColor }}
+                        >
+                            Oswaldo Da Conceicao
                         </Link>
                     </div>
 
@@ -244,7 +248,7 @@ export default function Home() {
                             <div className="relative z-10 card-inset p-8 rounded-xl">
                                 <div className="aspect-square rounded-xl overflow-hidden">
                                     <img
-                                        src="/img/profile.jpg?height=250&width=250"
+                                        src="./img/profile.jpg?height=250&width=250"
                                         alt="Developer Portrait"
                                         className="w-full h-full object-cover"
                                     />
@@ -372,7 +376,7 @@ export default function Home() {
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/img/bangkit.png?height=300&width=500&text=Gencara"
+                                            src="./img/bangkit.png?height=300&width=500&text=Gencara"
                                             alt="Gencara Bangkit Capstone Project Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
@@ -447,7 +451,7 @@ export default function Home() {
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/img/dicoding.jpg?height=300&width=500&text=Notes+app+Backend"
+                                            src="./img/dicoding.jpg?height=300&width=500&text=Notes+app+Backend"
                                             alt="Notes-app Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
@@ -514,7 +518,7 @@ export default function Home() {
                                 <div className="project-card rounded-lg overflow-hidden">
                                     <div className="aspect-video relative overflow-hidden">
                                         <img
-                                            src="/img/dicoding.jpg?height=300&width=500&text=Asclepius+Backend+App"
+                                            src="./img/dicoding.jpg?height=300&width=500&text=Asclepius+Backend+App"
                                             alt="Asclepius Backend Preview"
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         />
@@ -803,7 +807,7 @@ export default function Home() {
                                     >
                                         <div className="p-6 flex items-center justify-center">
                                             <img
-                                                src="/certification/bangkit.png?height=150&width=150&text=AWS"
+                                                src="./certification/bangkit.png?height=150&width=150&text=AWS"
                                                 alt="Bangkit Certification"
                                                 className="h-24 w-24 object-contain"
                                             />
@@ -857,7 +861,7 @@ export default function Home() {
                                     >
                                         <div className="p-6 flex items-center justify-center">
                                             <img
-                                                src="/certification/MGCE.png?height=150&width=150&text=GCE"
+                                                src="./certification/MGCE.png?height=150&width=150&text=GCE"
                                                 alt="Menjadi Google Cloud Engineer"
                                                 className="h-24 w-24 object-contain"
                                             />
@@ -911,7 +915,7 @@ export default function Home() {
                                     >
                                         <div className="p-6 flex items-center justify-center">
                                             <img
-                                                src="/certification/SystemAdministration.png?height=150&width=150&text=Meta"
+                                                src="./certification/SystemAdministration.png?height=150&width=150&text=Meta"
                                                 alt="Meta Frontend Certification"
                                                 className="h-24 w-24 object-contain"
                                             />
@@ -966,7 +970,7 @@ export default function Home() {
                                     >
                                         <div className="p-6 flex items-center justify-center">
                                             <img
-                                                src="/certification/fundamentals.png?height=150&width=150&text=Azure"
+                                                src="./certification/fundamentals.png?height=150&width=150&text=Azure"
                                                 alt="Google Cloud Computing Foundations: Cloud Computing Fundamentals"
                                                 className="h-24 w-24 object-contain"
                                             />
@@ -1137,7 +1141,7 @@ export default function Home() {
                                     }}
                                 >
                                     <img
-                                        src="/discord.png"
+                                        src="./discord.png"
                                         alt="Discord"
                                         className="h-5 w-5"
                                         style={{ fill: accentColor }}
