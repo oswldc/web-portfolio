@@ -226,7 +226,7 @@ export default function Home() {
                                     className="rounded-md"
                                 >
                                     <a
-                                        href="/resume/resume-oswaldo.pdf"
+                                        href="./resume/resume-oswaldo.pdf"
                                         download
                                         className="flex items-center"
                                     >
@@ -1162,7 +1162,7 @@ export default function Home() {
                                 }}
                             >
                                 <a
-                                    href="/resume/resume-oswaldo.pdf"
+                                    href="./resume/resume-oswaldo.pdf"
                                     download
                                     className="flex items-center"
                                 >
